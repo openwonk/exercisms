@@ -1,8 +1,8 @@
 package main
 
 import (
-	ds "./difference-of-squares"
-	"fmt"
+	shake "./secret-handshake"
+	// "fmt"
 )
 
 func main() {

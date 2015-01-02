@@ -4,12 +4,7 @@ import "sort"
 
 type Kind struct{}
 
-var (
-	Iso = Kind{} // 2 equal sides and angles
-	Equ = Kind{} // 3 equal sides and angles
-	Sca = Kind{} // NO equal sides and angles
-	NaT = Kind{} // sum(smaller sides) < largest side
-)
+var Iso, Equ, Sca, NaT Kind
 
 func KindFromSides(a, b, c float64) Kind {
 	triangle := []float64{a, b, c}
