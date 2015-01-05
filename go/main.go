@@ -1,10 +1,10 @@
 package main
 
 import (
-	shake "./secret-handshake"
-	// "fmt"
+	pascal "./pascals-triangle"
+	"fmt"
 )
 
 func main() {
-
+	pascal.Triangle(20)
 }
