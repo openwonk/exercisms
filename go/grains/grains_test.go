@@ -29,11 +29,11 @@ func TestSquare(t *testing.T) {
 		}
 
 		// if we expect an error and there isn't one
-		if test.expectError && actualErr == nil {
+		if test.expectError && actualErr == false {
 			t.Errorf("Square(%d) expected an error, but error is nil", test.input)
 		}
 		// if we don't expect an error and there is one
-		if !test.expectError && actualErr != nil {
+		if !test.expectError && actualErr != false {
 			t.Errorf("Square(%d) expected no error, but error is: %s", test.input, actualErr)
 		}
 	}
