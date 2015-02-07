@@ -11,10 +11,10 @@ var tests = []struct {
 	pt string // plain text
 	ct string // cipher text
 }{
-	// {
-	// 	"s#$%^&plunk",
-	// 	"su pn lk",
-	// },
+	{
+		"s#$%^&plunk",
+		"su pn lk",
+	},
 	{
 		"5432-+.5432@#$5432@#$#5432",
 		"5555 4444 3333 2222",

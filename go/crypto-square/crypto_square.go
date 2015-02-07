@@ -24,23 +24,29 @@ func Encode(plain string) (result string) {
 
 	// if not a perfect square...
 	if rem := math.Mod(sqrt, 1); rem != 0 {
-		// fmt.Println(length_of_plain, int(sqrt), 1-rem)
 		z := int(sqrt + 1)
-		z = z * z
-		z = (z - length_of_plain)
+		zz := z * z
+		fmt.Println(length_of_plain, z, zz)
+
+		z = (zz - length_of_plain)
+
 		for i := 0; i < z; i++ {
 			plain += " "
-			y += 1
-
 		}
+
+		y += 1
+		x += 1
 	}
 
-	fmt.Println("pre-table-loop: ", plain)
+	fmt.Println("pre-table-loop: ", plain+"|")
 	for i := 0; i <= y; i++ { // vertical
+		fmt.Println("v", "h", "e", "-")
+
 		for j := 0; j <= x; j++ { // horizontal
-			a := string(plain[j+(y*j)+i])
+			e := j + (y * j) + i
+			a := string(plain[e])
 			result += a
-			fmt.Println(":: ", a)
+			fmt.Println(i, j, e, a)
 		}
 		if i != y {
 			result += " "
@@ -48,6 +54,9 @@ func Encode(plain string) (result string) {
 		fmt.Println("result(", i, "): ", result)
 
 	}
+	r = regexp.MustCompile("[ ]+")
+	result = r.ReplaceAllString(result, " ")
+	// result = strings.Replace(result, "  ", " ", -1)
 	result = strings.Trim(result, " ")
 	return result // plain
 }
