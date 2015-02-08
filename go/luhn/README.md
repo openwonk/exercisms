@@ -1,4 +1,5 @@
-# Luhn
+Luhn
+====
 
 Write a program that can take a number and determine whether or not it is valid per the Luhn formula.
 
@@ -24,6 +25,8 @@ If the total ends in 0 (put another way, if the total modulus 10 is
 congruent to 0), then the number is valid according to the Luhn formula;
 else it is not valid. So, 1111 is not valid (as shown above, it comes
 out to 6), while 8763 is valid (as shown above, it comes out to 20).
+
+<hr>
 
 Write a program that, given a number
 

@@ -16,6 +16,7 @@ var validTests = []struct {
 }
 
 var addTests = []struct{ raw, luhn string }{
+	{"8763", "8763"},
 	{"123", "1230"},
 	{"873956", "8739567"},
 	{"837263756", "8372637564"},
