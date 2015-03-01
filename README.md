@@ -1,4 +1,4 @@
-Exercisms
+Go Exercisms
 =============
 
 Uploads from my personal [exercisms](http://exercism.io)...
