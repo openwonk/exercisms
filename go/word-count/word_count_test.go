@@ -10,16 +10,18 @@ var testCases = []struct {
 	input       string
 	output      Histogram
 }{
-	{
-		description: "a single word",
-		input:       "word",
-		output:      Histogram{"word": 1},
-	},
+
 	{
 		description: "one of each",
 		input:       "one of each",
 		output:      Histogram{"one": 1, "of": 1, "each": 1},
 	},
+	{
+		description: "a single word",
+		input:       "word",
+		output:      Histogram{"word": 1},
+	},
+
 	{
 		description: "multiple occurrences",
 		input:       "one fish two fish red fish blue fish",
